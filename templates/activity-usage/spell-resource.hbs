@@ -1,0 +1,15 @@
+<section data-resource-part="resource">
+    {{~#if resources.hasResources}}
+	<fieldset>
+			<legend>Spellcasting Resource</legend>
+			<div class="form-group">
+				<label>Resource</label>
+				<div class="form-fields">
+					<select name="spellcastingResource">
+						{{selectOptions resources.spellcasting selected=spellcastingResource}}
+					</select>
+				</div>
+			</div>
+	</fieldset>
+    {{/if~}}
+</section>

@@ -1,0 +1,107 @@
+:root {
+	--resource-left-color: #3a0e5f;
+	--resource-right-color: #8a40c7;
+    --resource-animation-name: scroll;
+}
+
+.dnd5e2.sheet.actor .meter-group.light-text .meter.resource .label .value,
+.dnd5e2.sheet.actor .meter-group.light-text .meter.resource .label .max,
+.dnd5e2.sheet.actor .meter-group.light-text .meter.resource input {
+	color: var(--color-text-light-0);
+}
+
+.dnd5e2.sheet.actor .meter-group.dark-text .meter.resource .label .value,
+.dnd5e2.sheet.actor .meter-group.dark-text .meter.resource .label .max,
+.dnd5e2.sheet.actor .meter-group.dark-text .meter.resource input {
+	color: var(--color-text-dark-1);
+}
+
+.dnd5e2.sheet.actor .meter.resource {
+	height: 25px;
+	font-size: var(--font-size-14);
+	cursor: pointer;
+}
+
+.dnd5e2.sheet.actor .meter.resource.progress::before {
+	background: linear-gradient(to right, var(--resource-left-color) 0%, var(--resource-right-color) 100%);
+	border-inline-end: var(--border-width) solid var(--resource-right-color);
+	-webkit-animation: var(--resource-animation-name) 5s linear infinite;
+	-moz-animation: var(--resource-animation-name) 5s linear infinite;
+	-o-animation: var(--resource-animation-name) 5s linear infinite;
+	animation: var(--resource-animation-name) 5s linear infinite;
+}
+
+@-webkit-keyframes scroll {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: -200% 0%;
+	}
+}
+
+@-moz-keyframes scroll {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: -200% 0%;
+	}
+}
+
+@-o-keyframes scroll {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: -200% 0%;
+	}
+}
+
+@keyframes scroll {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: -200% 0%;
+	}
+}
+
+.dnd5e2.sheet.actor.character .tab.spells .default-resource {
+    background: var(--dnd5e-background-card);
+	padding: 8px;
+}
+
+.dnd5e2.sheet.actor.character .tab.spells .default-resource .form-group label {
+    line-height: unset !important;
+}
+
+.dnd5e2.sheet.actor.character .tab.spells .default-resource .resource-name {
+    text-align: end;
+	font-weight: bold;
+	font-family: var(--dnd5e-font-roboto-slab);
+	font-size: var(--font-size-14);
+	color: var(--dnd5e-color-gold);
+}
+
+.dnd5e2.sheet.actor .meter.resource > input {
+    position: relative;
+}
+
+.dnd5e2.sheet.actor .meter.resource input:hover, .dnd5e2.sheet.actor .meter.resource input:focus {
+    box-shadow: 0 0 8px var(--dnd5e-color-gold);
+}
+
+.dnd5e2.sheet.actor .meter.resource input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+    background: none;
+    color: var(--color-text-light-0);
+}

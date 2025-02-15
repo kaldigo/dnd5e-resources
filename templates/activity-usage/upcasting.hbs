@@ -1,0 +1,12 @@
+<section data-resource-part="upcasting">
+    {{~#if resources.hasUpcasting}}
+	<fieldset>
+		<legend>
+			Upscasting
+		</legend>
+		{{#each resources.upcastingOptions}}
+			{{formField field name=name value=value options=options}}
+		{{/each}}
+	</fieldset>
+    {{/if~}}
+</section>

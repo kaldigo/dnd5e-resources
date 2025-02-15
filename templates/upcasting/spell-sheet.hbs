@@ -1,0 +1,35 @@
+<fieldset>
+	<legend>Upcasting</legend>
+	<div class="form-group">
+		<label>Use HP for Upcasting</label>
+		<div class="form-fields">
+			<dnd5e-checkbox name="flags.dnd5e-resources.brutalUpcasting" {{checked flags.dnd5e-resources.brutalUpcasting}} />
+		</div>
+	</div>
+
+	{{#if flags.dnd5e-resources.brutalUpcasting}}
+		<div class="form-group split-group">
+			<label>Upcasting</label>
+			<div class="form-fields">
+				<div class="form-group label-top">
+					<label>Cost</label>
+					<div class="form-fields">
+						<input type="number" name="flags.dnd5e-resources.upcastingCost" value="{{flags.dnd5e-resources.upcastingCost}}" min="0" step="1">
+					</div>
+				</div>
+				<div class="form-group label-top">
+					<label>Levels Limit</label>
+					<div class="form-fields">
+						<input type="number" name="flags.dnd5e-resources.upcastingLimit" value="{{flags.dnd5e-resources.upcastingLimit}}" min="0" step="1">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Limit Spell Level to Actor Max?</label>
+			<div class="form-fields">
+				<dnd5e-checkbox name="flags.dnd5e-resources.upcastingCap" {{checked flags.dnd5e-resources.upcastingCap}} />
+			</div>
+		</div>
+	{{/if}}
+</fieldset>

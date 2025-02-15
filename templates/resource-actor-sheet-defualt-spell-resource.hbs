@@ -1,0 +1,14 @@
+<section class="default-resource">
+	<div class="form-group">
+		<label>Default Spellcasting Resource</label>
+		<div class="form-fields">
+			{{#if editable}}
+				<select name="flags.dnd5e-resources.selectedSpellcastingResource.id">
+					{{selectOptions flags.dnd5e-resources.spellcastingResources selected=flags.dnd5e-resources.selectedSpellcastingResource.id}}
+				</select>
+			{{else}}
+                <span class="resource-name">{{flags.dnd5e-resources.selectedSpellcastingResource.name}}</span>
+			{{/if}}
+		</div>
+	</div>
+</section>
