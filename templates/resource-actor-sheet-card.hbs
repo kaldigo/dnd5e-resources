@@ -1,0 +1,21 @@
+<div class="meter-group {{flags.dnd5e-resources.textColor}}" style="--resource-left-color: {{flags.dnd5e-resources.resourceBarColorL}}; --resource-right-color: {{flags.dnd5e-resources.resourceBarColorR}};">
+	<div class="label roboto-condensed-upper">
+		<span>
+			{{name}}
+		</span>
+	</div>
+	<div class="meter progress resource" role="meter" aria-valuemin="0" aria-valuenow="{{system.uses.value}}" aria-valuemax="{{system.uses.max}}" style="--bar-percentage: {{system.uses.pct}}%">
+		<div class="label">
+			<span class="value">
+				{{system.uses.value}}
+			</span>
+			<span class="separator">
+				&sol;
+			</span>
+			<span class="max">
+				{{system.uses.max}}
+			</span>
+		</div>
+		<input type="text" data-resource-item="{{_id}}" data-dtype="Number" placeholder="0" value="{{system.uses.value}}" hidden />
+	</div>
+</div>

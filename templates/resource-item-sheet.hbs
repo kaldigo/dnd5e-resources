@@ -1,0 +1,105 @@
+<fieldset>
+	<legend>Resource</legend>
+	<div class="form-group">
+		<label>Show Resource Bar</label>
+		<div class="form-fields">
+			<dnd5e-checkbox name="flags.dnd5e-resources.showResourceBar" {{checked flags.dnd5e-resources.showResourceBar}} />
+		</div>
+	</div>
+
+	{{#if flags.dnd5e-resources.showResourceBar}}
+		<div class="form-group split-group">
+			<label>Resource Bar Color</label>
+			<div class="form-fields">
+				<div class="form-group label-top">
+					<label>Left Color</label>
+					<div class="form-fields">
+						<input type="color" name="flags.dnd5e-resources.resourceBarColorL" value="{{flags.dnd5e-resources.resourceBarColorL}}">
+					</div>
+				</div>
+				<div class="form-group label-top">
+					<label>Right Color</label>
+					<div class="form-fields">
+						<input type="color" name="flags.dnd5e-resources.resourceBarColorR" value="{{flags.dnd5e-resources.resourceBarColorR}}">
+					</div>
+				</div>
+			</div>
+		</div>
+	{{/if}}
+
+	<div class="form-group">
+		<label>Use for Spell Casting</label>
+		<div class="form-fields">
+			<dnd5e-checkbox name="flags.dnd5e-resources.spellCasting" {{checked flags.dnd5e-resources.spellCasting}} />
+		</div>
+	</div>
+
+	{{#if flags.dnd5e-resources.spellCasting}}
+		<div class="form-group">
+			<label>Level 1 Spell Slot Cost</label>
+			<div class="form-fields">
+				<input type="number" name="flags.dnd5e-resources.spellSlot.lvl1" value="{{flags.dnd5e-resources.spellSlot.lvl1}}" min="0" step="1">
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Level 2 Spell Slot Cost</label>
+			<div class="form-fields">
+				<input type="number" name="flags.dnd5e-resources.spellSlot.lvl2" value="{{flags.dnd5e-resources.spellSlot.lvl2}}" min="0" step="1">
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Level 3 Spell Slot Cost</label>
+			<div class="form-fields">
+				<input type="number" name="flags.dnd5e-resources.spellSlot.lvl3" value="{{flags.dnd5e-resources.spellSlot.lvl3}}" min="0" step="1">
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Level 4 Spell Slot Cost</label>
+			<div class="form-fields">
+				<input type="number" name="flags.dnd5e-resources.spellSlot.lvl4" value="{{flags.dnd5e-resources.spellSlot.lvl4}}" min="0" step="1">
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Level 5 Spell Slot Cost</label>
+			<div class="form-fields">
+				<input type="number" name="flags.dnd5e-resources.spellSlot.lvl5" value="{{flags.dnd5e-resources.spellSlot.lvl5}}" min="0" step="1">
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Level 6 Spell Slot Cost</label>
+			<div class="form-fields">
+				<input type="number" name="flags.dnd5e-resources.spellSlot.lvl6" value="{{flags.dnd5e-resources.spellSlot.lvl6}}" min="0" step="1">
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Level 7 Spell Slot Cost</label>
+			<div class="form-fields">
+				<input type="number" name="flags.dnd5e-resources.spellSlot.lvl7" value="{{flags.dnd5e-resources.spellSlot.lvl7}}" min="0" step="1">
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Level 8 Spell Slot Cost</label>
+			<div class="form-fields">
+				<input type="number" name="flags.dnd5e-resources.spellSlot.lvl8" value="{{flags.dnd5e-resources.spellSlot.lvl8}}" min="0" step="1">
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Level 9 Spell Slot Cost</label>
+			<div class="form-fields">
+				<input type="number" name="flags.dnd5e-resources.spellSlot.lvl9" value="{{flags.dnd5e-resources.spellSlot.lvl9}}" min="0" step="1">
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Calculate Uses From Spell Slots</label>
+			<div class="form-fields">
+				<dnd5e-checkbox name="flags.dnd5e-resources.calculateUsesFromSpellSlots" {{checked flags.dnd5e-resources.calculateUsesFromSpellSlots}} />
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Allow situational cost?</label>
+			<div class="form-fields">
+				<dnd5e-checkbox name="flags.dnd5e-resources.allowSituationalCost" {{checked flags.dnd5e-resources.allowSituationalCost}} />
+			</div>
+		</div>
+	{{/if}}
+</fieldset>
